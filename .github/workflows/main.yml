@@ -40,5 +40,8 @@ jobs:
         run: |
           docker build -t waskylala/terracicd:latest . 
           docker push waskylala/terracicd:latest
+          
+      - name: Apply Kubernetes Resources
+        run: terraform apply -auto-approve
 
           

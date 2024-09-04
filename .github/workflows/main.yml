@@ -38,7 +38,7 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t terracicd:latest . 
-          docker push your-dockerhub-waskylala/terracicd:latest
+          docker build -t waskylala/terracicd:latest . 
+          docker push waskylala/terracicd:latest
 
           

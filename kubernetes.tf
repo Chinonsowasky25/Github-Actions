@@ -28,8 +28,8 @@ resource "kubernetes_deployment" "api_deployment" {
 
       spec {
         container {
-          image = "waskylala/terracicd:latest"
           name  = "api-container"
+          image = "waskylala/terracicd:latest"
 
           port {
             container_port = 80
@@ -59,4 +59,4 @@ resource "kubernetes_service" "api_service" {
 
     type = "LoadBalancer"
   }
-} 
+}

@@ -31,9 +31,13 @@ jobs:
           terraform_version: 1.9.5
 
       - name: Set up Google Cloud Authentication
-        run: echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" > $HOME/gcloud.json && ls
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}    
+  run: |
+    echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" > $HOME/gcloud.json
+    export GOOGLE_APPLICATION_CREDENTIALS="$HOME/gcloud.json"
+    ls $HOME
+  env:
+    GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+
 
       #- name: Configure gcloud CLI
        # run: gcloud auth activate-service-account githubactions@sonic-totem-416019.iam.gserviceaccount.com --project=sonic-totem-416019 --key-file="sonic-totem-416019-ec8bab8f9e6a.json"  

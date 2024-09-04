@@ -31,7 +31,7 @@ resource "kubernetes_deployment" "api_deployment" {
           image = "waskylala/terracicd:latest"
           name  = "api-container"
 
-          ports {
+          port {
             container_port = 80
           }
         }

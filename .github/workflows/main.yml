@@ -26,8 +26,8 @@ jobs:
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}    
 
-      - name: Configure gcloud CLI
-        run: gcloud auth activate-service-account githubactions@sonic-totem-416019.iam.gserviceaccount.com --project=sonic-totem-416019 --key-file="sonic-totem-416019-ec8bab8f9e6a.json"  
+      #- name: Configure gcloud CLI
+       # run: gcloud auth activate-service-account githubactions@sonic-totem-416019.iam.gserviceaccount.com --project=sonic-totem-416019 --key-file="sonic-totem-416019-ec8bab8f9e6a.json"  
           
   
       - name: Terraform Init

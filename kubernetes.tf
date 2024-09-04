@@ -59,4 +59,4 @@ resource "kubernetes_service" "api_service" {
 
     type = "LoadBalancer"
   }
-}
+} 

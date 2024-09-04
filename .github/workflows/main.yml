@@ -1,4 +1,3 @@
-
 name: Terraform & Deploy
 
 on:
@@ -41,6 +40,5 @@ jobs:
         run: |
           docker build -t terracicd:latest . 
           docker push your-dockerhub-waskylala/terracicd:latest
-          
 
           

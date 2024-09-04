@@ -1,7 +1,6 @@
 provider "google" {
   project = "sonic-totem-416019"
   region  = "us-central1"
-  credentials = sonic-totem-416019-ec8bab8f9e6a.json
 }
 
 data "google_client_config" "default" {}

@@ -23,12 +23,18 @@ jobs:
           project_id: 'sonic-totem-416019'
           credentials: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
 
+      - name: Install kubectl
+        run: |
+          curl -LO "https://dl.k8s.io/release/v1.27.0/bin/linux/amd64/kubectl"
+          chmod +x ./kubectl
+          sudo mv ./kubectl /usr/local/bin/kubectl
+
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.9.5
 
-      - name: terraform init
+      - name: Terraform Init
         run: terraform init
 
       - name: Terraform Apply
@@ -50,3 +56,21 @@ jobs:
 
       - name: Apply Kubernetes Resources
         run: terraform apply -auto-approve
+
+      - name: Wait for API Deployment
+        run: |
+          kubectl rollout status deployment/api-deployment
+
+      - name: Test API Endpoint
+        run: |
+          # Wait until the LoadBalancer service is assigned an external IP
+          until [[ "$(kubectl get svc api-service -o jsonpath='{.status.loadBalancer.ingress[0].ip}')" != "" ]]; do
+            echo "Waiting for LoadBalancer IP..."
+            sleep 30
+          done
+
+          # Get the external IP of the LoadBalancer
+          EXTERNAL_IP=$(kubectl get svc api-service -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
+
+          # Test the API endpoint
+          curl -s -o /dev/null -w "%{http_code}" http://$EXTERNAL_IP | grep "200"

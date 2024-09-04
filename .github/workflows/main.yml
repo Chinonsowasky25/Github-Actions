@@ -32,6 +32,7 @@ jobs:
 
       - name: Set up Google Cloud Authentication
         run: echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" > $HOME/gcloud.json 
+        run: ls
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}    
 

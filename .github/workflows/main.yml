@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  setup: 
+  setup:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,29 +21,22 @@ jobs:
         with:
           version: 'latest'
           project_id: 'sonic-totem-416019'
-          credentials: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS}}
-          run: ls
-  
-
+          credentials: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.9.5
 
       - name: Set up Google Cloud Authentication
-  run: |
-    echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" > $HOME/gcloud.json
-    export GOOGLE_APPLICATION_CREDENTIALS="$HOME/gcloud.json"
-    ls $HOME
-  env:
-    GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        run: |
+          echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" > $HOME/gcloud.json
+          export GOOGLE_APPLICATION_CREDENTIALS="$HOME/gcloud.json"
+          ls $HOME
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
 
-
-      #- name: Configure gcloud CLI
-       # run: gcloud auth activate-service-account githubactions@sonic-totem-416019.iam.gserviceaccount.com --project=sonic-totem-416019 --key-file="sonic-totem-416019-ec8bab8f9e6a.json"  
-          
-  
-      - name: Terraform Init
+      - name: terraform init
         run: terraform init
 
       - name: Terraform Apply
@@ -60,10 +53,8 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t waskylala/terracicd:latest . 
+          docker build -t waskylala/terracicd:latest .
           docker push waskylala/terracicd:latest
           
       - name: Apply Kubernetes Resources
         run: terraform apply -auto-approve
-
-          

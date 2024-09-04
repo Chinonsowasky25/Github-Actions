@@ -22,6 +22,7 @@ jobs:
           version: 'latest'
           project_id: 'sonic-totem-416019'
           credentials: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+          run: ls
   
 
       - name: Set up Terraform

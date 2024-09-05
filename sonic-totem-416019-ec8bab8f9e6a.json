@@ -1,13 +1,1 @@
-{
-  "type": "service_account",
-  "project_id": "sonic-totem-416019",
-  "private_key_id": "ec8bab8f9e6a12ffd9b0a91fe0cbd7f93645da79",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDfy2lpDAu3M5eL\n1inNhUc3dK5pFsR3T2elxm+Mv2Ee2u9qqqP6Iiehv/xjVSDy6EGlb4Sa5NGVoGc4\nKmnxPvuUZ5SNjnngyTWtMS7VCCnCSDoR6CWaRnFGkeY6MV+Z0aFhBK+puRxSVW/D\n9mYf6AdJG8cPSkSUCl2Q6a/zAbI4sQBVamRzNETiCg4hnu64e1MEFvVs4SFBVKHZ\n9Cq4cpNlxkpMJOeX7blwoYMN2wXU94zH8eKWxa8+m+urwCJMRDV7SDMcZpgfjKKm\n3r9NrOuykQeoKDa3KlQ1QNYTbYBF4DeWzWRfG4C44Sm1EphBFhnkFZjgStdTdGmA\n5QF2gqIHAgMBAAECggEADx0jr0569BJt56m9BP49QweER+CbwBsCuvVdzzmVi4np\npWCE1n28A3Z9yw+SvBTnag7P+838QYilr+tdYEeKogkkxTKcFIxCLcImkYiNmWtb\nUJ5G+9ZKDCQKUl/HPxIjPfQdEO9JdF4EwE1BtGHtLAjONsAjRYQ1sXW2xkiVCrL5\nJeh1aXJrY1geBajZ4UFCrgrs6w9FnADh4jSfvhkac8x1IoMz/cOnuwVhaNI4Cxuu\n6/XOiU579/nr+U1RT1yH9wH2+5gDqF6+YuCOp+1W51PO0OVqEkIkSgA0ok6b4l48\nW5Q2LuDYdTdTgDW/kK0vq70UAigpqwVYWeHqla8fIQKBgQD1L9NcLLiZmbcXanEt\n3vXEROd3fFyFQZRvQlhJmB4X2MEtqe+knFt31lLX6nBdyBdL67x2xIPy9BbS4YT5\nhgUpOdn6x+siRkM5PfMxJW5iZY2OW24ELVfyER+aKcGBVTJQqsHpr5m7YfgPLI6d\nJh7DcMMoneX9xkrGIgwfnf3OWQKBgQDpqhD/mtLX8t14LKi/dJUtnak/W4LV4Yei\n+GddF/O+A8VRcXy5CT30Z7DbIkgEoh58zZdB/xTkwKK2vPgHiPHtoIYM+bs+TNPz\n5pwcLy9zKtjHkwwom9sHF7kzcEBm/uaosmc6MFClLUc5yzDR5g6Rvak2lEkYwoxZ\nfuAHAI+nXwKBgQDNSICnYQ4iFJA2O7mNFWsiLCq8YNQ6AeFckejHnWQ8xQ9gwzJQ\n2VS/7iMogjIYYwoWV8ZQjlKHnRRq9cTXAf3aOYSnMrFM3hU0nQi7skJMgghWE3j2\naFyE4Q9bjPBl78YTwhRfKtYFDI6bbcvuCVeifQv5OtKwelBquWD7K9Wv6QKBgQCW\nz+BWyVvKa4NL/C8SGzHpljfVn7/LQdwkcIVuTXZRLufdEA169B8brw0z8mVfMC/T\nR3KX8wZOOpMKtN61JktXnuLGXyzeIgIvCqm5ey75+y6daShQ0X9FjadILuwyTdUc\nDsGXifWTFq1A/QdOgljm8e3UP1MKew7Q+JWpj1AoqwKBgFTYyI7EOhZjxDzgNDmq\n4k75TZavBnXz/oevCtlQBcygnx1jDn1s7o70sPxlwJd/Q6wMUuL3x8HZottvMcQL\nIkrgLrOsvOUmzR8XACrh1bmDLM295DIMUlc1VmjkSwXSO+j5KFLQTLs5RQqq7sIp\nEF7Bh8TrIKu9sQqWQpKeeGqv\n-----END PRIVATE KEY-----\n",
-  "client_email": "githubactions@sonic-totem-416019.iam.gserviceaccount.com",
-  "client_id": "101620464821216500215",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/githubactions%40sonic-totem-416019.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-}
+
